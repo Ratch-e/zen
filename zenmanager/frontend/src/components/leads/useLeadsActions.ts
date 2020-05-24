@@ -1,8 +1,8 @@
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { SET_LEADS, DELETE_LEAD, ADD_LEAD } from "../../types";
-import { LEADS_URL } from "../../api/contants";
-import { lead } from "./types";
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { SET_LEADS, DELETE_LEAD, ADD_LEAD } from '../../types';
+import { LEADS_URL } from '../../api/contants';
+import { lead } from './types';
 
 const useLeadsActions = () => {
     const dispatch = useDispatch();
@@ -14,19 +14,19 @@ const useLeadsActions = () => {
                 payload: res.data,
             });
         } catch (err) {
-            return console.error(err);
+            throw new Error(err);
         }
     };
 
-    const addLead = async (lead: lead) => {
+    const addLead = async (newLead: lead) => {
         try {
-            const res = await axios.post(LEADS_URL, lead);
+            const res = await axios.post(LEADS_URL, newLead);
             dispatch({
                 type: ADD_LEAD,
                 payload: res.data,
             });
         } catch (err) {
-            return console.error(err);
+            throw new Error(err);
         }
     };
 
@@ -38,7 +38,7 @@ const useLeadsActions = () => {
                 payload: id,
             });
         } catch (err) {
-            return console.error(err);
+            throw new Error(err);
         }
     };
 

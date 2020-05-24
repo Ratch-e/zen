@@ -1,1 +1,1 @@
-export const LEADS_URL = "/api/leads/";
+export const LEADS_URL = '/api/leads/';

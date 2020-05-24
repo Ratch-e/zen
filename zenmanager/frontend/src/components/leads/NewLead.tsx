@@ -1,9 +1,11 @@
-import * as React from "react";
-import { Dialog, DialogTitle, TextField, Button } from "@material-ui/core";
-import { Form, Field } from "react-final-form";
+import * as React from 'react';
+import {
+    Dialog, DialogTitle, TextField, Button,
+} from '@material-ui/core';
+import { Form, Field } from 'react-final-form';
 
-import useLeadsActions from "./useLeadsActions";
-import { lead } from "./types";
+import useLeadsActions from './useLeadsActions';
+import { lead } from './types';
 
 interface Props {
     open: boolean;

@@ -9,5 +9,5 @@ export const Dashboard = () => (
     <div className={styles.dashboard}>
         <Typography variant="h4">Dashboard1</Typography>
         <Leads />
-  </div>
+    </div>
 );

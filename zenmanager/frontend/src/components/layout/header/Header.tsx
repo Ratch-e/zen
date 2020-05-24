@@ -1,6 +1,6 @@
-import * as React from "react";
-import { AppBar, Toolbar, IconButton } from "@material-ui/core";
-import { Menu } from "@material-ui/icons";
+import * as React from 'react';
+import { AppBar, Toolbar, IconButton } from '@material-ui/core';
+import { Menu } from '@material-ui/icons';
 
 export const Header = () => (
     <AppBar>

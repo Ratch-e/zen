@@ -1,8 +1,8 @@
-import { lead } from "./components/leads/types";
+import { lead } from './components/leads/types';
 
-export const SET_LEADS = "SET_LEADS";
-export const DELETE_LEAD = "DELETE_LEAD";
-export const ADD_LEAD = "ADD_LEAD";
+export const SET_LEADS = 'SET_LEADS';
+export const DELETE_LEAD = 'DELETE_LEAD';
+export const ADD_LEAD = 'ADD_LEAD';
 
 interface SetLeadsAction {
     type: typeof SET_LEADS;
