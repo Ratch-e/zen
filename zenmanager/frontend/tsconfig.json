@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "lib": ["es6", "dom"],
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "target": "esNext",
+        "module": "commonjs",
+        "jsx": "react"
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

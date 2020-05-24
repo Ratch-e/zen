@@ -4,12 +4,18 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                resolve: { extensions: [".js", ".jsx"] },
+                test: /\.ts(x?)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                },
+                use: [
+                    {
+                        loader: "ts-loader",
+                    },
+                ],
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader",
             },
             {
                 test: /\.css$/i,
@@ -33,6 +39,10 @@ module.exports = {
                 ],
             },
         ],
+    },
+
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"],
     },
 
     devtool: "inline-source-maps",
