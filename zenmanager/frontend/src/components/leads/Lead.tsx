@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from "react";
 import {
     Card,
     CardContent,
     CardActions,
     Typography,
     IconButton,
-} from '@material-ui/core';
-import { DeleteForever } from '@material-ui/icons/';
+} from "@material-ui/core";
+import { DeleteForever } from "@material-ui/icons/";
 
-import * as styles from './Lead.module.css';
+import * as styles from "./Lead.module.css";
 
 interface Props {
     id: string;
@@ -18,9 +18,7 @@ interface Props {
     onDelete: (id: string) => Promise<void>;
 }
 
-export const Lead = ({
-    id, name, email, message, onDelete,
-}: Props) => (
+export const Lead = ({ id, name, email, message, onDelete }: Props) => (
     <Card className={styles.lead}>
         <CardContent>
             <Typography variant="h5">{name}</Typography>

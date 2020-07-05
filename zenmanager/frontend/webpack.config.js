@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 
 module.exports = {
@@ -31,7 +32,7 @@ module.exports = {
                                 localIdentName: "[path][local]",
                                 context: path.resolve(
                                     __dirname,
-                                    "src/components",
+                                    "src/components"
                                 ),
                             },
                         },

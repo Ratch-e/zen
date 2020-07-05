@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { useSelector } from 'react-redux';
-import { Fab } from '@material-ui/core';
-import { Add } from '@material-ui/icons';
+import * as React from "react";
+import { useSelector } from "react-redux";
+import { Fab } from "@material-ui/core";
+import { Add } from "@material-ui/icons";
 
-import { RootState } from '../../reducers';
+import { RootState } from "../../reducers";
 
-import NewLead from './NewLead';
-import useLeadsActions from './useLeadsActions';
-import { Lead } from './Lead';
-import { lead } from './types';
+import NewLead from "./NewLead";
+import useLeadsActions from "../../reducers/leads/useLeadsActions";
+import { Lead } from "./Lead";
+import { lead } from "./types";
 
 const Leads = () => {
     const [isPopupShown, togglePopup] = React.useState(false);
@@ -19,22 +19,21 @@ const Leads = () => {
         getLeads();
     }, []);
 
-    const renderLeads = () => (leads && leads.length ? (
-        leads.map(({
-            id, email, name, message,
-        }: lead) => (
-            <Lead
-                key={id}
-                id={id}
-                email={email}
-                name={name}
-                message={message}
-                onDelete={deleteLead}
-            />
-        ))
-    ) : (
-        <div>no leads</div>
-    ));
+    const renderLeads = () =>
+        leads && leads.length ? (
+            leads.map(({ id, email, name, message }: lead) => (
+                <Lead
+                    key={id}
+                    id={id}
+                    email={email}
+                    name={name}
+                    message={message}
+                    onDelete={deleteLead}
+                />
+            ))
+        ) : (
+            <div>no leads</div>
+        );
 
     return (
         <>
